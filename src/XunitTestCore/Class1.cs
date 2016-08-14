@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MainProjectChief.TestClass;
 using Xunit;
 
 namespace XunitTestCore
@@ -18,6 +19,15 @@ namespace XunitTestCore
       public void FailingTest()
       {
          Assert.Equal(5, Add(2, 2));
+      }
+
+      [Fact]
+      public void ConcatenateName()
+      {
+         TestClass concat = new TestClass();
+         string concated = concat.ConcateName("Arun","Prasad");
+         Assert.Equal("ArunPrasad",concated);
+
       }
 
       int Add(int x, int y)
