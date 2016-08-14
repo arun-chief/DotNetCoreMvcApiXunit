@@ -24,9 +24,10 @@ namespace XunitTestCore
       [Fact]
       public void ConcatenateName()
       {
-         TestClass concat = new TestClass();
-         string concated = concat.ConcateName("Arun","Prasad");
-         Assert.Equal("ArunPrasad",concated);
+         TestClass concat = new TestClass(); // initialising the class to test
+         
+
+         Assert.Equal("ArunPrasad", concat.ConcateName("Arun", "Prasad")); // checking the result by mathing
 
       }
 
